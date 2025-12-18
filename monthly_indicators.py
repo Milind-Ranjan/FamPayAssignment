@@ -65,8 +65,8 @@ def write_symbol_files(monthly: pd.DataFrame, output_dir: str) -> None:
 
 
 def main():
-    input_path = "/Users/milindranjan/Downloads/FamPay/dataset.csv"
-    output_dir = os.getcwd()
+    input_path = "/Users/milindranjan/Downloads/FamPay/output_file.csv"
+    output_dir = os.path.join(os.getcwd(), "results")
     df = load_data(input_path)
     monthly = aggregate_monthly(df)
     monthly = add_indicators(monthly)
